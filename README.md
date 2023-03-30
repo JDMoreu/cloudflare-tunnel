@@ -1,4 +1,4 @@
-# Contenedor Docker para Cloudflared
+# Contenedor Docker para Cloudflare Tunnel Zero
 
 Este contenedor Docker permite ejecutar un túnel de Cloudflare usando `cloudflared`. Está basado en la imagen de Alpine Linux y utiliza el archivo binario `cloudflared-linux-arm64.deb` para instalar `cloudflared`.
 
