@@ -2,6 +2,17 @@
 
 Este contenedor Docker permite ejecutar un túnel de Cloudflare usando `cloudflared`. Está basado en la imagen de Alpine Linux y utiliza el archivo binario `cloudflared-linux-arm64.deb` para instalar `cloudflared`.
 
+# Crear imagen
+
+```bash
+
+git clone https://github.com/JDMoreu/cloudflare-tunnel-alpine.git
+
+docker build -t cloudflare-tunnel /cloudflare-tunel-alphine
+
+```
+
+
 ## Cómo funciona
 
 El contenedor ejecuta un script `entrypoint.sh` que realiza las siguientes acciones:
