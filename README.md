@@ -13,3 +13,12 @@ docker build -t cloudflare-tunnel /cloudflare-tunel
 ```
 
 Tambien puedes descargarla desde dockerhub junto con su documentación: `https://hub.docker.com/r/jdmoreu/cloudflare-tunnel`
+
+## Cómo funciona
+
+El contenedor ejecuta un script `entrypoint.sh` que realiza las siguientes acciones:
+
+1. Solicita la autenticación del túnel.
+2. Crea el túnel y configura la ruta DNS.
+3. Configura las credenciales del túnel.
+4. Inicia el túnel.
