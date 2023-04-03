@@ -17,7 +17,7 @@ if [ ! -f /root/.cloudflared/config.yaml ]; then
     echo "tunnel: $(cloudflared tunnel info $NAME | grep -oP 'Your tunnel \K\S+' | awk '{print $1}')" >> /root/.cloudflared/config.yaml && echo "credentials-file: /root/.cloudflared/$(cloudflared tunnel info $NAME | grep -oP 'Your tunnel \K\S+' | awk '{print $1}').json" >> /root/.cloudflared/config.yaml && cat <<EOT >> /root/.cloudflared/config.yaml
     ingress:
       - hostname:
-        service: $protocol://localhost:80
+        service: $protocol://localhost:$port
         originRequest:
           noTLSVerify: true
     EOT
