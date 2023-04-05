@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  cloudflared:
+    image: jdmoreu/cloudflare-tunnel
+    ports:
+      - "82:82"
+    environment:
+      - NAME=my-tunnel
+      - hostname=hostname.com
+      - protocol=http
+      - port=82
+    volumes:
+      - /root/.cloudflared:/root/.cloudflared
